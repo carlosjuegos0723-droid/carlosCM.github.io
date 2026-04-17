@@ -56,32 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Form Submission Handling (Mock)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'Enviando...';
-            btn.disabled = true;
+    // Form submission handling removed as form was replaced by a direct link
 
-            setTimeout(() => {
-                btn.innerText = '¡Mensaje Enviado!';
-                btn.style.backgroundColor = '#00ff88';
-                btn.style.color = '#000';
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.style.color = '';
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    }
 
     // 6. Mobile Menu Toggle (Simple)
     const menuToggle = document.querySelector('.menu-toggle');
